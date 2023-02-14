@@ -516,7 +516,13 @@ MonoBehaviour:
   lShootkey: 113
   rShootkey: 101
   fShootkey: 323
-  lShootPoint: {fileID: 1494973277}
-  rShootPoint: {fileID: 326423379}
+  lShootPoint:
+  - {fileID: 1494973277}
+  - {fileID: 6495319193620097969}
+  - {fileID: 5054514463238768713}
+  rShootPoint:
+  - {fileID: 326423379}
+  - {fileID: 3905739485015524945}
+  - {fileID: 8459387442950159164}
   fShootPoint: {fileID: 4571661473731528740}
   bulletPrefab: {fileID: 3275141700690143931, guid: 7cdf6035ffff080479f70bf01ffe8ded, type: 3}

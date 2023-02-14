@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
-    public GameObject explosion;
+    public GameObject explosionPrefab;
 
     public float damage;
     // Start is called before the first frame update
@@ -22,6 +22,6 @@ public class Bullet : MonoBehaviour
 
     void OnDestroy()
     {
-        Instantiate(explosion, this.transform.position, Quaternion.identity);
+        Instantiate(explosionPrefab, this.transform.position, Quaternion.identity);
     }
 }
