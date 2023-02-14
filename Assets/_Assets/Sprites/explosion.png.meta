@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 165a3b7ee5637c64b8ae650381bd314c
+guid: 8fb46960cb4c33b4080c8dccd1bd3ce6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_0
+      name: explosion_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 66
-        height: 113
+        x: 0
+        y: 0
+        width: 74
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7ee9397855953747971955d07a59dec
-      internalID: 1845855436
+      spriteID: a14711681dca2094a9462e64413bd46c
+      internalID: 902454029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_1
+      name: explosion_1
       rect:
         serializedVersion: 2
-        x: 70
-        y: 2
-        width: 66
-        height: 113
+        x: 81
+        y: 8
+        width: 60
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fea60d73a254d474eb1f1d5ffe094c95
-      internalID: 1235806752
+      spriteID: 9013f95d32b157d4c928dce552e2d2ab
+      internalID: -1562597761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_2
+      name: explosion_2
       rect:
         serializedVersion: 2
-        x: 138
-        y: 2
-        width: 66
-        height: 113
+        x: 164
+        y: 17
+        width: 42
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c1accd9571ebe14e91244e271e34c77
-      internalID: 2023010284
+      spriteID: 50c5f3641beabe74fa991ec0fefb4a6f
+      internalID: 2064866556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_3
+      name: explosion_3
       rect:
         serializedVersion: 2
-        x: 206
-        y: 2
-        width: 66
-        height: 113
+        x: 250
+        y: 18
+        width: 18
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +182,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa1d21c4681826f47bd6085a88871150
-      internalID: -256160490
+      spriteID: a84a4ec04e9dd4a4d8d7b961df34b85e
+      internalID: -1728018502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_4
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 24
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3514567ebe21442b0e91ed1b4d961d
+      internalID: -439447121
       vertices: []
       indices: 
       edges: []
@@ -199,10 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_2: 2023010284
-      Player_1: 1235806752
-      Player_0: 1845855436
-      Player_3: -256160490
+      explosion_2: 2064866556
+      explosion_0: 902454029
+      explosion_1: -1562597761
+      explosion_4: -439447121
+      explosion_3: -1728018502
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
