@@ -476,7 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   explosionPrefab: {fileID: 50038502843513982, guid: 2a9c16707d6f282438a1fce418f0e3e5, type: 3}
-  speedRotation: 300
+  speedRotation: 100
 --- !u!114 &948704958
 MonoBehaviour:
   m_ObjectHideFlags: 0
