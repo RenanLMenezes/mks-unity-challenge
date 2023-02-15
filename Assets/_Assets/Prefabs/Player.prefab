@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 326423379}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1209621028}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftCannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1494973277}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1964806630}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightCannons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5054514463238768713}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftShootPoint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6495319193620097969}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftShootPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4571661473731528740}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6331614217303142417}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrontCannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3905739485015524945}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightShootPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8459387442950159164}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightShootPoint (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7685258552970091483}
   - component: {fileID: 7685258552970091482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 1845855436, guid: 165a3b7ee5637c64b8ae650381bd314c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -411,10 +411,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7685258553402467933}
   - component: {fileID: 7685258553402467934}
-  - component: {fileID: 7685258553402467929}
   - component: {fileID: 7685258553402467928}
   - component: {fileID: 948704958}
-  m_Layer: 0
+  - component: {fileID: 885521155}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -461,32 +461,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &7685258553402467929
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7685258553402467922}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.007878244, y: -0.009616852}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3177792, y: 2.2118392}
-  m_EdgeRadius: 0
 --- !u!114 &7685258553402467928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,6 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  explosionPrefab: {fileID: 50038502843513982, guid: 2a9c16707d6f282438a1fce418f0e3e5, type: 3}
   speedRotation: 300
 --- !u!114 &948704958
 MonoBehaviour:
@@ -526,3 +501,23 @@ MonoBehaviour:
   - {fileID: 8459387442950159164}
   fShootPoint: {fileID: 4571661473731528740}
   bulletPrefab: {fileID: 3275141700690143931, guid: 7cdf6035ffff080479f70bf01ffe8ded, type: 3}
+--- !u!114 &885521155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7685258553402467922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c21dea9ece1a493459f9f0863efcc924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  hp: 100
+  spriteRender: {fileID: 7685258552970091482}
+  sprites:
+  - {fileID: 1845855436, guid: 165a3b7ee5637c64b8ae650381bd314c, type: 3}
+  - {fileID: 1235806752, guid: 165a3b7ee5637c64b8ae650381bd314c, type: 3}
+  - {fileID: 2023010284, guid: 165a3b7ee5637c64b8ae650381bd314c, type: 3}
+  - {fileID: -256160490, guid: 165a3b7ee5637c64b8ae650381bd314c, type: 3}
