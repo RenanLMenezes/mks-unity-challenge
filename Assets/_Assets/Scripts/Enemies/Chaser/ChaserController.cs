@@ -5,9 +5,14 @@ using UnityEngine.AI;
 
 public class ChaserController : MonoBehaviour
 {
-    Transform target = null;
+    Transform target;
 
     public GameObject explosionPrefab;
+
+    [SerializeField]
+    private float maxDistance = 10f;
+    private float currentDistance;
+    HPSystem hpSystem;
 
     private NavMeshAgent agent;
 
@@ -17,6 +22,8 @@ public class ChaserController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hpSystem = GetComponent<HPSystem>();
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -25,7 +32,14 @@ public class ChaserController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(target != null)
+        CheckHP();
+
+        if (IsInvoking("Death"))
+            return;
+
+        currentDistance = Vector3.Distance(transform.position, target.transform.position);
+
+        if (currentDistance <= maxDistance)
         {
             agent.SetDestination(target.position);
             Rotate(target.position - transform.position);
@@ -43,20 +57,10 @@ public class ChaserController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnDrawGizmosSelected()
     {
-        if(collision.gameObject.tag == "Player")
-        {
-            target = collision.gameObject.transform;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            target = null;
-        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, maxDistance);
     }
 
     void Rotate(Vector2 dir)
@@ -67,5 +71,18 @@ public class ChaserController : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, speedRotation * Time.deltaTime);
 
         }
+    }
+    void CheckHP()
+    {
+        if (hpSystem.hp <= 0)
+        {
+            var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
+            Invoke("Death", 1f);
+        }
+    }
+
+    void Death()
+    {
+        Destroy(gameObject);
     }
 }

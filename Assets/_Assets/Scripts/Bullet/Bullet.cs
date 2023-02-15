@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 1f);
     }
 
     // Update is called once per frame
@@ -23,5 +23,17 @@ public class Bullet : MonoBehaviour
     void OnDestroy()
     {
         Instantiate(explosionPrefab, this.transform.position, Quaternion.identity);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag != "Player")
+        {
+            if(collision.gameObject.tag == "Enemy")
+            {
+                collision.gameObject.GetComponent<HPSystem>().hp -= damage;
+            }
+            Destroy(gameObject);
+        }
     }
 }
