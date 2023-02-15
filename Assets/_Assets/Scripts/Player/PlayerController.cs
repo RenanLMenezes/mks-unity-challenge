@@ -37,17 +37,15 @@ public class PlayerController : MonoBehaviour
     void Move(Vector2 dir)
     {
         dir.Normalize();
-
-        rb.velocity = dir * speed;
+        if(Input.GetAxisRaw("Vertical") > 0)
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
     }
 
     void Rotate(Vector2 dir)
     {
-        if (dir != Vector2.zero)
+        if (dir.x != 0)
         {
-            Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, dir);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, speedRotation * Time.deltaTime);
-
+            transform.Rotate(new Vector3(0f, 0f, - dir.x) * speedRotation * Time.deltaTime);
         }
     }
     

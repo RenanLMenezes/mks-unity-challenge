@@ -38968,6 +38968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7685258553402467928, guid: c6ac7db2afc953d44914a32a69061905, type: 3}
+      propertyPath: speedRotation
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7685258553402467933, guid: c6ac7db2afc953d44914a32a69061905, type: 3}
       propertyPath: m_RootOrder
       value: 1
