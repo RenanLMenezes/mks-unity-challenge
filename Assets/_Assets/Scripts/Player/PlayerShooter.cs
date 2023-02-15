@@ -23,7 +23,6 @@ public class PlayerShooter : MonoBehaviour
         {
             if (canShoot)
             {
-                Debug.Log("left");
                 StartCoroutine(LSpawnShoot());
             }
         }
@@ -32,7 +31,6 @@ public class PlayerShooter : MonoBehaviour
         {
             if (canShoot)
             {
-                Debug.Log("right");
                 StartCoroutine(RSpawnShoot());
             }
         }
@@ -41,7 +39,6 @@ public class PlayerShooter : MonoBehaviour
         {
             if (canShoot)
             {
-                Debug.Log("front");
                 StartCoroutine(FSpawnShoot());
             }
         }
