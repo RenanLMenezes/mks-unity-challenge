@@ -56,8 +56,8 @@ public class PlayerController : MonoBehaviour
         if (hpSystem.hp <= 0) 
         {
             var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
-            explosion.transform.localScale = new Vector3(5f,5f);
-            Invoke("Death", 1f);
+            explosion.transform.localScale = new Vector3(3f,3f);
+            Invoke("Death", 2f);
         }
     }
 

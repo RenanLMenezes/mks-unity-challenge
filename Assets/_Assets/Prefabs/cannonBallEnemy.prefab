@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6017920461908681208}
   - component: {fileID: 7358660872903061230}
   - component: {fileID: 5221936456023339654}
-  - component: {fileID: 7119759403184590245}
+  - component: {fileID: -1815180037708956292}
   m_Layer: 0
   m_Name: cannonBallEnemy
   m_TagString: EnemyBullet
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 5a3350b3e5d888449a226da0cde21a30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -211,7 +211,7 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &7119759403184590245
+--- !u!114 &-1815180037708956292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,9 +220,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6388758469579257787}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf12d689a1697bf42a75b7924a7126e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 677dff950b6c6f3448ec095ec23215ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
   explosionPrefab: {fileID: 50038502843513982, guid: 2a9c16707d6f282438a1fce418f0e3e5, type: 3}
-  damage: 5
+  damage: 8

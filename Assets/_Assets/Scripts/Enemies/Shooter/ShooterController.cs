@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ChaserController : MonoBehaviour
+public class ShooterController : MonoBehaviour
 {
     Transform target;
 
-    public GameObject explosionPrefab;
+    [SerializeField] Transform shootPoint;
 
-    [SerializeField]
-    private float maxDistance = 10f;
+    public GameObject explosionPrefab, bulletPrefab;
+
+    [SerializeField] private float maxDistance = 10f;
+    [SerializeField] private float attackDistance = 5f;
+    
     private float currentDistance;
     HPSystem hpSystem;
 
@@ -18,6 +21,8 @@ public class ChaserController : MonoBehaviour
 
     [SerializeField]
     private float speedRotation;
+
+    private bool canShoot = true;
 
     // Start is called before the first frame update
     void Start()
@@ -39,26 +44,29 @@ public class ChaserController : MonoBehaviour
 
         currentDistance = Vector3.Distance(transform.position, target.transform.position);
 
-        if (currentDistance <= maxDistance)
+        if(currentDistance <= attackDistance)
         {
+            if (currentDistance <= attackDistance - 2)
+                agent.isStopped = true;
+            if (canShoot)
+            {
+                StartCoroutine(SpawnShoot());
+            }
+            Rotate(target.position - transform.position);
+        }
+        else if (currentDistance <= maxDistance)
+        {
+            agent.isStopped = false;
             agent.SetDestination(target.position);
             Rotate(target.position - transform.position);
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player" && hpSystem.hp > 0)
-        {
-            HPSystem playerHp = collision.gameObject.GetComponent<HPSystem>();
-            playerHp.hp -= 10;
-            Instantiate(explosionPrefab, this.transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
-    }
-
     private void OnDrawGizmosSelected()
     {
+        Gizmos.color = Color.black;
+        Gizmos.DrawWireSphere(transform.position, attackDistance);
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, maxDistance);
     }
@@ -77,7 +85,8 @@ public class ChaserController : MonoBehaviour
         if (hpSystem.hp <= 0)
         {
             agent.isStopped = true;
-            Instantiate(explosionPrefab, transform.position, transform.rotation);
+            var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
+            explosion.transform.localScale = new Vector3(3f, 3f);
             Invoke("Death", 1f);
         }
     }
@@ -85,5 +94,13 @@ public class ChaserController : MonoBehaviour
     void Death()
     {
         Destroy(gameObject);
+    }
+
+    IEnumerator SpawnShoot()
+    {
+        canShoot = false;
+        Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
+        yield return new WaitForSeconds(1f);
+        canShoot = true;
     }
 }
