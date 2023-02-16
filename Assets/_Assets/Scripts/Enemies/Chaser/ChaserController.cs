@@ -13,6 +13,7 @@ public class ChaserController : MonoBehaviour
     private float maxDistance = 10f;
     private float currentDistance;
     HPSystem hpSystem;
+    HUDManager hud;
 
     private NavMeshAgent agent;
 
@@ -24,6 +25,7 @@ public class ChaserController : MonoBehaviour
     {
         hpSystem = GetComponent<HPSystem>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        hud = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDManager>();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -78,7 +80,13 @@ public class ChaserController : MonoBehaviour
         {
             agent.isStopped = true;
             Instantiate(explosionPrefab, transform.position, transform.rotation);
-            Invoke("Death", 1f);
+
+            if (!IsInvoking("Death"))
+            {
+                hud.score += Random.Range(5, 10);
+                Invoke("Death", 1f);
+
+            }
         }
     }
 

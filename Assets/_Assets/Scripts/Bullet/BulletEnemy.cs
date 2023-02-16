@@ -22,7 +22,7 @@ public class BulletEnemy : MonoBehaviour
 
     void OnDestroy()
     {
-        Instantiate(explosionPrefab, this.transform.position, Quaternion.identity);
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

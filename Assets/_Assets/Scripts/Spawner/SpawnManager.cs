@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    private float timer = 3f;
+    private float timer = GameManager.Instance.SpawnTimer;
     public List<GameObject> spawner;
 
     private void Start()

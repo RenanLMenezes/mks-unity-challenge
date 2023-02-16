@@ -6,8 +6,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    private float spawnTimer;
-    private float timer;
+    private int score = 0;
+    private float spawnTimer = 10;
+    private float timer = 30;
+
+    public int Score
+    {
+        get { return score; }
+        set { score = value; }
+    }
 
     public float Timer
     {
@@ -31,5 +38,6 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        DontDestroyOnLoad(this.gameObject);
     }
 }

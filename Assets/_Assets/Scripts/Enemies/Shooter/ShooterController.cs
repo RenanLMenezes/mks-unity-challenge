@@ -16,6 +16,7 @@ public class ShooterController : MonoBehaviour
     
     private float currentDistance;
     HPSystem hpSystem;
+    HUDManager hud;
 
     private NavMeshAgent agent;
 
@@ -29,6 +30,7 @@ public class ShooterController : MonoBehaviour
     {
         hpSystem = GetComponent<HPSystem>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        hud = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDManager>();
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -87,12 +89,17 @@ public class ShooterController : MonoBehaviour
             agent.isStopped = true;
             var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
             explosion.transform.localScale = new Vector3(3f, 3f);
-            Invoke("Death", 1f);
+
+            if (!IsInvoking("Death"))
+            {
+                hud.score += Random.Range(2, 8);
+                Invoke("Death", 1f);
+            }
         }
     }
 
     void Death()
-    {
+    {  
         Destroy(gameObject);
     }
 

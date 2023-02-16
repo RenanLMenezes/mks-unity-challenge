@@ -13,7 +13,6 @@ public class MenuManager : MonoBehaviour
     public Slider timeGameSlider;
     public Slider timeSpawnSlider;
 
-
     public void Play()
     {
         SceneManager.LoadScene(1);

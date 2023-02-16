@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BulletPlayer : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class BulletPlayer : MonoBehaviour
 
     void OnDestroy()
     {
-        Instantiate(explosionPrefab, this.transform.position, Quaternion.identity);
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
