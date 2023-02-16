@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using NaughtyAttributes;
 
 
 public class HPSystem : MonoBehaviour
 {
+    public Image hpBar;
+
     [BoxGroup("Health Points")]
     public float maxHp, hp;
 
@@ -14,17 +17,22 @@ public class HPSystem : MonoBehaviour
     [BoxGroup("Sprites")]
     public Sprite[] sprites;
 
+    private void Update()
+    {
+        hpBar.fillAmount = hp / maxHp;
+    }
+
     private void FixedUpdate()
     {
-        if((hp/maxHp) >= .66f)
+        if(hpBar.fillAmount >= .66f)
         {
             spriteRender.sprite = sprites[0];
         }
-        else if ((hp / maxHp) >= .33f)
+        else if (hpBar.fillAmount >= .33f)
         {
             spriteRender.sprite = sprites[1];
         }
-        else if ((hp / maxHp) > 0)
+        else if (hpBar.fillAmount > 0)
         {
             spriteRender.sprite = sprites[2];
         }
