@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 7719910019143547448}
   - component: {fileID: 8756867369317789189}
   m_Layer: 0
-  m_Name: Test tile rule
+  m_Name: Sand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
