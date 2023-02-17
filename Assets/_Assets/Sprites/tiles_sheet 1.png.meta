@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,6 +91,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -2187,15 +2199,15 @@ TextureImporter:
       tiles_sheet 1_79: 436070695
       tiles_sheet 1_4: -892727902
       tiles_sheet 1_7: 2009048247
-      tiles_sheet 1_11: 1413759707
       tiles_sheet 1_73: 314607296
       tiles_sheet 1_89: 379967891
+      tiles_sheet 1_11: 1413759707
       tiles_sheet 1_17: 1151970051
       tiles_sheet 1_16: -1976332279
       tiles_sheet 1_35: -1794226233
       tiles_sheet 1_22: 1634544750
-      tiles_sheet 1_25: 1857956670
       tiles_sheet 1_84: -744986981
+      tiles_sheet 1_25: 1857956670
       tiles_sheet 1_54: 1379786511
       tiles_sheet 1_86: 1464944723
       tiles_sheet 1_31: 1218860997
