@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
     private int score = 0;
-    private float spawnTimer = 10;
+    private float spawnTimer = 1;
     private float timer = 30;
 
     public int Score
@@ -32,12 +34,30 @@ public class GameManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
             Instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void GoMenu()
+    {
+        this.score = 0;
+        SceneManager.LoadScene(0);
+    }
+
+    public void GoGame()
+    {
+        this.score = 0;
+        SceneManager.LoadScene(1);
+    }
+
+    public void GoGameOver(int score)
+    {
+        this.score = score;
+        SceneManager.LoadScene(2);
     }
 }

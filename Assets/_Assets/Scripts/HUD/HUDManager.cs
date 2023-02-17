@@ -10,30 +10,43 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private TMP_Text scoreTxt;
 
     private float timer;
-    public int score = 0;
+    public int score;
+    ScoreManager scoreManager;
 
-    private void Awake()
+
+    private void Start()
     {
+        score = 0;
         timer = GameManager.Instance.Timer;
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
 
     private void FixedUpdate()
     {
-        scoreTxt.text = $"Score: {score}";
-        Debug.Log(score);
-        timer -= Time.fixedDeltaTime;
-        int sec = ((int)timer % 60);
-        int min = ((int)timer / 60);
-        timerTxt.text = timer > 0 ? string.Format("{0:00}:{1:00}", min, sec) : "00:00";
-        TimeOut();
+        UpdateScore();
+        UpdateTimer();
+        CheckTimeOut();
     }
 
-    void TimeOut()
+    private void UpdateScore()
+    {
+        score = scoreManager.score;
+        scoreTxt.text = $"Score: {score}";
+    }
+
+    private void UpdateTimer()
+    {
+        timer -= Time.fixedDeltaTime;
+        int sec = Mathf.FloorToInt(timer % 60);
+        int min = Mathf.FloorToInt(timer / 60);
+        timerTxt.text = timer > 0 ? string.Format("{0:00}:{1:00}", min, sec) : "00:00";
+    }
+
+    private void CheckTimeOut()
     {
         if (timer <= 0)
         {
-            GameManager.Instance.Score = score;
-            SceneManager.LoadScene(2);
+            GameManager.Instance.GoGameOver(score);
         }
     }
 }

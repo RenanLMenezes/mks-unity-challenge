@@ -548,8 +548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 1920050806945694261}
-  maxHp: 100
-  hp: 100
+  maxHp: 200
+  hp: 200
   spriteRender: {fileID: 7685258552970091482}
   sprites:
   - {fileID: 1845855436, guid: 165a3b7ee5637c64b8ae650381bd314c, type: 3}

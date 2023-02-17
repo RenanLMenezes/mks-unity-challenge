@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     
     HPSystem hpSystem;
     public GameObject explosionPrefab;
+    ScoreManager scoreManager;
 
     public float speedRotation = 300;
 
@@ -61,6 +62,6 @@ public class PlayerController : MonoBehaviour
 
     void Death()
     {
-        SceneManager.LoadScene(2);
+       GameManager.Instance.GoGameOver(scoreManager.score);
     }
 }
