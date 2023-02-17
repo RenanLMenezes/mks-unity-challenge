@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     private int score = 0;
     private float spawnTimer = 1;
-    private float timer = 30;
+    private float timer = 60;
 
     public int Score
     {

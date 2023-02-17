@@ -40166,10 +40166,6 @@ PrefabInstance:
       value: SpawnManager
       objectReference: {fileID: 0}
     - target: {fileID: 2197096742772073558, guid: 0215ebe40da56244f84a3d3d336edac2, type: 3}
-      propertyPath: spawner.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2197096742772073558, guid: 0215ebe40da56244f84a3d3d336edac2, type: 3}
       propertyPath: spawner.Array.data[0]
       value: 
       objectReference: {fileID: 8505976455989260773}
