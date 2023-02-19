@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a0dcc0db8aabe23488a20984ddc29f4a
+guid: 8fb46960cb4c33b4080c8dccd1bd3ce6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,17 +101,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnemyShooter_0
+      name: explosion_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 66
-        height: 113
+        x: 0
+        y: 0
+        width: 74
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2ccb7aa3897bb342a92f1eb0fc42e3f
-      internalID: 6370986
+      spriteID: a14711681dca2094a9462e64413bd46c
+      internalID: 902454029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyShooter_1
+      name: explosion_1
       rect:
         serializedVersion: 2
-        x: 70
-        y: 2
-        width: 66
-        height: 113
+        x: 81
+        y: 8
+        width: 60
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34f77e08e570a6844bc8874509566efd
-      internalID: 1342535949
+      spriteID: 9013f95d32b157d4c928dce552e2d2ab
+      internalID: -1562597761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyShooter_2
+      name: explosion_2
       rect:
         serializedVersion: 2
-        x: 138
-        y: 2
-        width: 66
-        height: 113
+        x: 164
+        y: 17
+        width: 42
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18d055f043481d043a5ec6b9cc36d276
-      internalID: 1633356994
+      spriteID: 50c5f3641beabe74fa991ec0fefb4a6f
+      internalID: 2064866556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyShooter_3
+      name: explosion_3
       rect:
         serializedVersion: 2
-        x: 206
-        y: 2
-        width: 66
-        height: 113
+        x: 250
+        y: 18
+        width: 18
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,8 +194,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7211de67c2b7b4c43811fb4a674156bc
-      internalID: -1095243202
+      spriteID: a84a4ec04e9dd4a4d8d7b961df34b85e
+      internalID: -1728018502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explosion_4
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 24
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3514567ebe21442b0e91ed1b4d961d
+      internalID: -439447121
       vertices: []
       indices: 
       edges: []
@@ -199,10 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EnemyShooter_1: 1342535949
-      EnemyShooter_2: 1633356994
-      EnemyShooter_0: 6370986
-      EnemyShooter_3: -1095243202
+      explosion_2: 2064866556
+      explosion_0: 902454029
+      explosion_1: -1562597761
+      explosion_4: -439447121
+      explosion_3: -1728018502
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

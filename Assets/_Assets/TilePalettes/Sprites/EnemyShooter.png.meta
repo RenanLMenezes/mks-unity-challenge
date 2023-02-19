@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 402a5252d44a22a45abbcbf4c7414a59
+guid: a0dcc0db8aabe23488a20984ddc29f4a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,11 +101,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EnemyChaser_0
+      name: EnemyShooter_0
       rect:
         serializedVersion: 2
         x: 2
@@ -119,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7ed66de13a81c643b4f60b9884f57f1
-      internalID: 2141955639
+      spriteID: f2ccb7aa3897bb342a92f1eb0fc42e3f
+      internalID: 6370986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyChaser_1
+      name: EnemyShooter_1
       rect:
         serializedVersion: 2
         x: 70
@@ -140,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a314fb66c54baa48894f64d0c9ffca6
-      internalID: -1760507013
+      spriteID: 34f77e08e570a6844bc8874509566efd
+      internalID: 1342535949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyChaser_2
+      name: EnemyShooter_2
       rect:
         serializedVersion: 2
         x: 138
@@ -161,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a2ff26850bd37d4da45d4bd6ed3d8f4
-      internalID: -229386346
+      spriteID: 18d055f043481d043a5ec6b9cc36d276
+      internalID: 1633356994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EnemyChaser_3
+      name: EnemyShooter_3
       rect:
         serializedVersion: 2
         x: 206
@@ -182,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c63b3ca2d14b1374d85ae08827056d7b
-      internalID: 943563794
+      spriteID: 7211de67c2b7b4c43811fb4a674156bc
+      internalID: -1095243202
       vertices: []
       indices: 
       edges: []
@@ -199,10 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      EnemyChaser_2: -229386346
-      EnemyChaser_1: -1760507013
-      EnemyChaser_0: 2141955639
-      EnemyChaser_3: 943563794
+      EnemyShooter_1: 1342535949
+      EnemyShooter_2: 1633356994
+      EnemyShooter_0: 6370986
+      EnemyShooter_3: -1095243202
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

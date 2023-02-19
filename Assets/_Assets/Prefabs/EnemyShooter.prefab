@@ -425,6 +425,10 @@ MonoBehaviour:
   bulletPrefab: {fileID: 6388758469579257787, guid: cf62b7d585d20e04ba77ae815c77cdd1, type: 3}
   maxDistance: 10
   attackDistance: 5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  walkRange: 25
   speedRotation: 700
 --- !u!114 &4168438094061180489
 MonoBehaviour:
@@ -467,7 +471,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &4168438094061180495
 PolygonCollider2D:
   m_ObjectHideFlags: 0
