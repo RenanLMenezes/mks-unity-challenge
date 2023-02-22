@@ -428,7 +428,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  walkRange: 25
+  walkRange: 15
   speedRotation: 700
 --- !u!114 &4168438094061180489
 MonoBehaviour:

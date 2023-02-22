@@ -17,6 +17,13 @@ public class ChaserController : MonoBehaviour
 
     private NavMeshAgent agent;
 
+    [SerializeField] LayerMask groundLayer;
+
+    //Patrol
+    Vector3 destPoint;
+    bool walkPointSet;
+    [SerializeField] float walkRange;
+
     [SerializeField]
     private float speedRotation;
 
@@ -46,6 +53,10 @@ public class ChaserController : MonoBehaviour
             agent.SetDestination(target.position);
             Rotate(target.position - transform.position);
         }
+        else
+        {
+            Patrol();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -63,6 +74,36 @@ public class ChaserController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, maxDistance);
+    }
+
+    void Patrol()
+    {
+        if (!walkPointSet)
+        {
+            SearchForDest();
+        }
+        if (walkPointSet)
+        {
+            agent.SetDestination(destPoint);
+            Rotate(destPoint - transform.position);
+        }
+        if (Vector3.Distance(transform.position, destPoint) < 10f)
+        {
+            walkPointSet = false;
+        }
+    }
+
+    void SearchForDest()
+    {
+        float y = Random.Range(-walkRange, walkRange);
+        float x = Random.Range(-walkRange, walkRange);
+
+        destPoint = new Vector3(transform.position.x + x, transform.position.y + y);
+
+        if (Physics2D.Raycast(destPoint, Vector2.down, groundLayer))
+        {
+            walkPointSet = true;
+        }
     }
 
     void Rotate(Vector2 dir)

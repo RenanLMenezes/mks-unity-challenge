@@ -35,7 +35,6 @@ public class ShooterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         hpSystem = GetComponent<HPSystem>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();

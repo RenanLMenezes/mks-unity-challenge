@@ -454,6 +454,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 50038502843513982, guid: 2a9c16707d6f282438a1fce418f0e3e5, type: 3}
   maxDistance: 10
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  walkRange: 15
   speedRotation: 720
 --- !u!60 &2238834028838261788
 PolygonCollider2D:
