@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     
     HPSystem hpSystem;
+    PlayerShooter playerShooter;
     public GameObject explosionPrefab;
     ScoreManager scoreManager;
 
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         hpSystem = GetComponent<HPSystem>();
+        playerShooter = GetComponent<PlayerShooter>();
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
     }
 
@@ -58,6 +60,7 @@ public class PlayerController : MonoBehaviour
             var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
             explosion.transform.localScale = new Vector3(3f,3f);
             Invoke("Death", 2f);
+            playerShooter.enabled = false;
         }
     }
 
